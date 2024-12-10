@@ -27,6 +27,7 @@ body {
 .taskContainer {
   display: flex;
   justify-content: space-around;
+  gap: 30px;
 }
 .taskContainer > div {
   width: 20vw;

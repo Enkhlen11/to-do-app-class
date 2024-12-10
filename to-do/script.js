@@ -67,7 +67,6 @@ function addTaskList(title, color, count, paragraph) {
   p.innerText = count;
   const cirlce = document.createElement("div");
   cirlce.setAttribute("class", "circle");
-
   cirlce.style.backgroundColor = color;
   titleDiv.appendChild(cirlce);
   titleDiv.appendChild(h2);
@@ -79,16 +78,22 @@ function addTaskList(title, color, count, paragraph) {
   listItem.setAttribute("class", "listItem");
   todoList.appendChild(listDiv);
   listDiv.appendChild(listItem);
-
   const pDiv = document.createElement("p");
   listItem.appendChild(pDiv);
   pDiv.innerText = paragraph;
+  const selectDiv = document.createElement("select");
+  listItem.appendChild(selectDiv);
+  const optionDiv1 = document.createElement("option");
+  const optionDiv2 = document.createElement("option");
+  selectDiv.appendChild(optionDiv1);
+  selectDiv.appendChild(optionDiv2);
+  optionDiv1.innerText = "In progress";
+  optionDiv2.innerText = "done";
+  const image = document.createElement("img");
+  image.setAttribute("src", "./trash.svg");
+  listItem.appendChild(image);
 }
 
-addTaskList(
-  containerItems[0].title,
-  containerItems[0].color,
-  containerItems[0].count,
-  containerItems[0].paragraph
-);
-containerItems.map(() => {});
+containerItems.map((item) => {
+  addTaskList(item.title, item.color, item.count, item.paragraph);
+});
