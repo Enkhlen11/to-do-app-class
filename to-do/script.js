@@ -38,7 +38,7 @@ const containerItems = [
     id: "in-progress",
     title: "In progress",
     count: 5,
-    color: "white",
+    color: "yellow",
     paragraph: "[loan-managament] - Add card component",
   },
   {
@@ -75,7 +75,7 @@ const todos = [
   {
     title: "hi",
     date: "10-21",
-    state: "blocked",
+    state: "done",
   },
 ];
 //<div class="" id=""> innerText </div>
@@ -141,6 +141,10 @@ const renderTodo = (title, date, state) => {
   titleDiv.innerText = title;
   objectDiv.appendChild(titleDiv);
 
+  const sumDiv = document.createElement("div");
+  sumDiv.setAttribute("class", "sumDiv");
+  todoDiv.appendChild(sumDiv);
+
   const stateDiv = document.createElement("div");
   stateDiv.innerText = date;
   todoDiv.appendChild(stateDiv);
@@ -153,6 +157,8 @@ const renderTodo = (title, date, state) => {
     option = document.createElement("option");
     option.innerText = item.id;
     selectDiv.appendChild(option);
+    sumDiv.appendChild(objectDiv);
+    sumDiv.appendChild(selectDiv);
   });
 
   // const optionDiv1 = document.createElement("option");
@@ -165,7 +171,7 @@ const renderTodo = (title, date, state) => {
 
   const image = document.createElement("img");
   image.setAttribute("src", "./trash.svg");
-  objectDiv.appendChild(image);
+  sumDiv.appendChild(image);
 };
 todos.map((item) => {
   renderTodo(item.title, item.date, item.state);
