@@ -149,13 +149,20 @@ const renderTodo = (title, date, state) => {
   const selectDiv = document.createElement("select");
   todoDiv.appendChild(selectDiv);
 
-  const optionDiv1 = document.createElement("option");
-  const optionDiv2 = document.createElement("option");
-  selectDiv.appendChild(optionDiv1);
-  optionDiv1.innerText = "In progress";
-  selectDiv.appendChild(optionDiv2);
-  optionDiv2.innerText = "done";
-  objectDiv.appendChild(selectDiv);
+  containerItems.map((item) => {
+    option = document.createElement("option");
+    option.innerText = item.id;
+    selectDiv.appendChild(option);
+  });
+
+  // const optionDiv1 = document.createElement("option");
+  // const optionDiv2 = document.createElement("option");
+  // selectDiv.appendChild(optionDiv1);
+  // optionDiv1.innerText = "In progress";
+  // selectDiv.appendChild(optionDiv2);
+  // optionDiv2.innerText = "done";
+  // objectDiv.appendChild(selectDiv);
+
   const image = document.createElement("img");
   image.setAttribute("src", "./trash.svg");
   objectDiv.appendChild(image);
