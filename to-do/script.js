@@ -1,30 +1,37 @@
+// {
+//   /* <div class="todoList">
+//         <div class="title">
+//           <div class="circle"></div>
+//           <h2>To do</h2>
+//           <p class="count">5</p>
+//         </div>
+//         <div class="list">
+//           <div class="listItem">
+//             <p>[loan-managament] - Add card component</p>
+//             <select name="" id="">
+//               <option value="">In progress</option>
+//               <option value="">Done</option>
+//             </select>
+//             <img src="./trash.svg" alt="" />
+//           </div>
+//           <div class="listem">
+//             <p>[loan-managament] - Add card component</p>
+//             <select name="" id="">
+//               <option value="">In progress</option>
+//               <option value="">Done</option>
+//             </select>
+//             <img src="./trash.svg" alt="" />
+//           </div>
+//         </div>
+//       </div> */
+// }
 {
-  /* <div class="todoList">
-        <div class="title">
-          <div class="circle"></div>
-          <h2>To do</h2>
-          <p class="count">5</p>
-        </div>
-        <div class="list">
-          <div class="listItem">
-            <p>[loan-managament] - Add card component</p>
-            <select name="" id="">
-              <option value="">In progress</option>
-              <option value="">Done</option>
-            </select>
-            <img src="./trash.svg" alt="" />
-          </div>
-          <div class="listem">
-            <p>[loan-managament] - Add card component</p>
-            <select name="" id="">
-              <option value="">In progress</option>
-              <option value="">Done</option>
-            </select>
-            <img src="./trash.svg" alt="" />
-          </div>
-        </div>
-      </div> */
+  /* <div class="addTask">
+  <button>Add Task</button>
+</div>; */
 }
+const addButton = document.getElementById("add");
+const addInput = document.getElementById("input");
 
 const containerItems = [
   {
