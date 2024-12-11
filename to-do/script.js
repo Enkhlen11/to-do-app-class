@@ -30,8 +30,6 @@
   <button>Add Task</button>
 </div>; */
 }
-const addButton = document.getElementById("add");
-const addInput = document.getElementById("input");
 
 const containerItems = [
   {
