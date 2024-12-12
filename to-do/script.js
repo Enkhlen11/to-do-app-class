@@ -25,11 +25,12 @@
 //         </div>
 //       </div> */
 // }
-{
-  /* <div class="addTask">
-  <button>Add Task</button>
-</div>; */
-}
+
+// const renderTodoItems = (title, date, state) => {
+//   const container = document.getElementById(state);
+//   const listItem = document.createElement("div");
+//   listItem.setAttribute("class", "listItem");
+// };
 
 const containerItems = [
   {
@@ -181,3 +182,27 @@ const renderTodo = (title, date, state) => {
 todos.map((item) => {
   renderTodo(item.title, item.date, item.state);
 });
+const button = document.getElementById("add");
+const input = document.getElementById("input");
+input.addEventListener("input", (event) => {
+  console.log(event.target.value);
+});
+
+button.addEventListener("click", () => {
+  todos.push({
+    title: "input.value",
+    date: "12-12",
+    state: "to-do",
+  });
+  renderTodos();
+  input.value = null;
+});
+function renderTodos() {
+  const todoId = document.getElementById("to-do");
+  todoId.innerHTML = null;
+  todos.map((todo) => {
+    const p = document.createElement("p");
+    p.innerText = todo;
+    todoId.appendChild(p);
+  });
+}
