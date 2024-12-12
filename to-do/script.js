@@ -206,3 +206,7 @@ function renderTodos() {
     todoId.appendChild(p);
   });
 }
+const falseButton = document.createElement("button");
+button.addEventListener("click", () => {
+  button.push = null;
+});
